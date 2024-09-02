@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression suite">
+    <test name="Order">
+
+        <packages>
+            <package name="gui.lesson1.*"></package>
+        </packages>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="purchase item"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <packages>-->
+<!--            <package name="gui.lesson1"/>-->
+<!--            <package name="gui.lesson2"/>-->
+<!--        </packages>-->
+
+
+    </test>
+</suite>
