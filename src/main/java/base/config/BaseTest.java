@@ -14,7 +14,7 @@ public class BaseTest {
     public void configuration() {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1280x920";
-        Configuration.holdBrowserOpen = false;
+        Configuration.holdBrowserOpen = true;
         Configuration.timeout = 10000;
         Configuration.pageLoadTimeout = 10000;
         Configuration.headless = false;
@@ -24,18 +24,21 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        Selenide.open("https://www.google.com");
+        // https://www.stats.govt.nz/large-datasets/csv-files-for-download/ - URL TO DOWNLOAD FILE
+        // https://ps.uci.edu/~franklin/doc/file_upload.html - URL TO UPLOAD FILE
+        // https://checkcps.com/double-click/ - URL TO DOUBLE CLICK
+        Selenide.open("https://checkcps.com/double-click/");
     }
 
-    @AfterMethod
-    public void cleanWebDriver() {
-        Selenide.clearBrowserCookies();
-        Selenide.refresh();
-        Selenide.open("about:blank");
-    }
-
-    @AfterTest
-    public void tearDown() {
-        Selenide.closeWebDriver();
-    }
+//    @AfterMethod
+//    public void cleanWebDriver() {
+//        Selenide.clearBrowserCookies();
+//        Selenide.refresh();
+//        Selenide.open("about:blank");
+//    }
+//
+//    @AfterTest
+//    public void tearDown() {
+//        Selenide.closeWebDriver();
+//    }
 }
