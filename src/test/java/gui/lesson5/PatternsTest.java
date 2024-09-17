@@ -49,6 +49,10 @@ public class PatternsTest extends BaseTest {
 
         Assert.assertEquals(itemNameFromMainPage, itemNameFromOverviewPage, "items are not equal");
 
+        Price price = Pages.checkoutOverviewPage().getPrice();
+
+        Assert.assertEquals(price.getTotalWithTax(), price.getItemTotal() + price.getTax());
+
         Pages.checkoutOverviewPage().clickFinishButton();
 
         Assert.assertTrue(Pages.checkoutCompletePage().isCompleteMessageExists(), "order failed");
