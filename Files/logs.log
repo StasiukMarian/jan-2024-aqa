@@ -1,0 +1,44 @@
+20:26:47 | INFO | Utils:112                                | [TestNG] Running:
+  C:\Users\User\AppData\Local\JetBrains\IntelliJIdea2023.2\temp-testng-customsuite.xml
+
+20:26:47 | INFO | SimpleReport:57                          | Report for configuration
++----------------------+---------+------------+------------+
+| Element              | Subject | Status     | ms.        |
++----------------------+---------+------------+------------+
++----------------------+---------+------------+------------+
+
+20:26:47 | INFO | WebDriverThreadLocalContainer:135        | No webdriver is bound to current thread: 1 - let's create a new webdriver
+20:26:48 | INFO | FileHelper:46                            | Creating folder: D:\IdeaProjects\jan-2024-aqa\build\downloads\1726853208010_22680_1
+20:26:49 | INFO | WebDriverFactory:142                     | BrowserName=chrome Version=129.0.6668.58 Platform=windows
+20:26:49 | INFO | WebDriverFactory:75                      | Selenide v. 7.4.2
+20:26:49 | INFO | WebDriverFactory:136                     | Selenium WebDriver v. 4.23.1 build revision: 656257d8e9
+20:26:49 | INFO | CreateDriverCommand:74                   | Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (f611bdc5f3ed331cb9bd3b24ff327340), downloadsFolder: D:\IdeaProjects\jan-2024-aqa\build\downloads\1726853208010_22680_1
+20:26:49 | INFO | DisposablesRegistry:30                   | Register WebDriverInstance[config=StaticConfig, webDriver=ChromeDriver: chrome on windows (f611bdc5f3ed331cb9bd3b24ff327340), proxy=null, downloadsFolder=D:\IdeaProjects\jan-2024-aqa\build\downloads\1726853208010_22680_1] in 1 [size=1]
+20:26:49 | INFO | DisposablesRegistry:32                   | Add shutdown hook in 1 [size=1]
+20:26:49 | INFO | WebDriverThreadLocalContainer:178        | Browser will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on windows (f611bdc5f3ed331cb9bd3b24ff327340)
+20:26:50 | INFO | SimpleReport:57                          | Report for setUp
++----------------------+----------------------------+------------+------------+
+| Element              | Subject                    | Status     | ms.        |
++----------------------+----------------------------+------------+------------+
+| open                 | https://www.saucedemo.com/ | PASS       | 2815       |
+|   webdriver          | create()                   | PASS       | 1458       |
++----------------------+----------------------------+------------+------------+
+
+20:26:51 | INFO | SimpleReport:57                          | Report for frameworkTest
++---------------------------------------------------+------------------------------------------------------------------------+------------+------------+
+| Element                                           | Subject                                                                | Status     | ms.        |
++---------------------------------------------------+------------------------------------------------------------------------+------------+------------+
+| #user-name                                        | should be(input condition: visible and empty: attribute value="" and exact text "") | PASS       | 112        |
+| #user-name                                        | append(standard_user)                                                  | PASS       | 111        |
+| #password                                         | should be(input condition: visible and empty: attribute value="" and exact text "") | PASS       | 47         |
+| #password                                         | append(secret_sauce)                                                   | PASS       | 68         |
+| By.xpath: //input[@type='submit']                 | should be(clickable: interactable and enabled)                         | PASS       | 28         |
+| By.xpath: //input[@type='submit']                 | click()                                                                | PASS       | 91         |
+| By.xpath: //body//*[text()='Swag Labs']           | should be(visible)                                                     | PASS       | 27         |
+| By.xpath: //body//*[text()='Swag Labs']           | text()                                                                 | PASS       | 30         |
+| By.xpath: //div[@class='inventory_item_name '][1] | click()                                                                | PASS       | 85         |
++---------------------------------------------------+------------------------------------------------------------------------+------------+------------+
+
+20:26:51 | INFO | DisposablesRegistry:66                   | Run cleanup: size=1
+20:26:51 | INFO | CloseDriverCommand:27                    | Hold browser open: 33 -> ChromeDriver: chrome on windows (f611bdc5f3ed331cb9bd3b24ff327340)
+20:26:51 | INFO | DisposablesRegistry:68                   | Finished cleanup

@@ -1,5 +1,6 @@
 package base.pages;
 
+import base.config.PageTools;
 import com.codeborne.selenide.ElementsCollection;
 
 import java.time.Duration;
@@ -10,7 +11,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPage {
+public class MainPage extends PageTools {
     private final String headerLogo = "//body//*[text()='Swag Labs']";
     private final String items = "//div[@class='inventory_item_name ']";
     private final String backpackButton = "add-to-cart-sauce-labs-backpack";
@@ -22,12 +23,17 @@ public class MainPage {
     }
 
     /*get methods*/
+
+    public String getHeaderLogoText(){
+        shouldBe("xpath", visible, headerLogo);
+        return getText("xpath", headerLogo);
+    }
     public ElementsCollection getItemHeaders() {
-        return $$(byXpath(items)).shouldBe(size(6));
+       return getElements("xpath", items);
     }
 
     public List<String> getItemHeadersText() {
-        return $$(byXpath(items)).shouldBe(size(6)).texts();
+        return getElementsText("xpath", items);
     }
 
     /*click methods*/

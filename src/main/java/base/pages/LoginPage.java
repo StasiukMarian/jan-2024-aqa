@@ -1,26 +1,30 @@
 package base.pages;
 
+import base.config.PageTools;
+
 import static base.helpers.CustomConditions.*;
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
 
-public class LoginPage {
+
+public class LoginPage extends PageTools {
     private final String usernameInput = "user-name";
     private final String passwordInput = "password";
     private final String submitButton = "//input[@type='submit']";
 
     /*TYPE METHODS*/
     public void typeUsername(String username) {
-        $(byId(usernameInput)).shouldBe(inputCondition).append(username);
+        shouldBe("id", inputCondition, usernameInput);
+        type("id", username, usernameInput);
     }
 
     public void typePassword(String password) {
-        $(byName(passwordInput)).shouldBe(inputCondition).append(password);
+        shouldBe("id", inputCondition, passwordInput);
+        type("id", password, passwordInput);
     }
 
     /*CLICK METHODS*/
     public void clickSubmitButton() {
-        $(byXpath(submitButton)).shouldBe(clickable).click();
+        shouldBe("xpath", clickable, submitButton);
+        click("xpath", submitButton);
     }
 }

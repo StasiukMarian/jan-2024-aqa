@@ -2,12 +2,10 @@ package base.config;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import com.codeborne.selenide.testng.TextReport;
+import org.testng.annotations.*;
 
-
+@Listeners({TextReport.class})
 public class BaseTest {
 
     @BeforeTest
