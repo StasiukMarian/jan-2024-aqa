@@ -30,5 +30,6 @@ public class DetailItemTest extends BaseTest {
         Item detailedItem = Pages.detailItemPage().getDetailedItem();
 
         Assert.assertTrue(itemListFromMainPage.contains(detailedItem), "Item is not exist in the list");
+        $(byXpath("te")).click();
     }
 }
