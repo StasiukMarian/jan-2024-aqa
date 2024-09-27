@@ -33,6 +33,9 @@ public class BaseTest {
         // https://checkcps.com/double-click/ - URL TO DOUBLE CLICK
         // https://faculty.washington.edu/chudler/java/boxes.html - URL WITH CHECKBOXES
         // https://github.com/StasiukMarian/jan-2024-aqa git
+        // "https://demoqa.com/progress-bar"
+        //"https://demoqa.com/alerts"
+        //"http://uitestingplayground.com/shadowdom"
         Selenide.open("https://www.saucedemo.com/");
     }
 
