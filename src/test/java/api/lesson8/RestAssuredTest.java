@@ -1,4 +1,4 @@
-package gui.lesson8;
+package api.lesson8;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static base.helpers.Constants.BASE_URL;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class RestAssuredTest {
-    public static final String BASE_URL = "https://reqres.in/";
 
     //    @Test
     public void getTest() {

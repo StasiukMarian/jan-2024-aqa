@@ -6,4 +6,5 @@ public class Constants {
     public static final String firstName = "Marian";
     public static final String lastName = "Stasiuk";
     public static final String zip = "78000";
+    public static final String BASE_URL = "https://reqres.in/";
 }
